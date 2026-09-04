@@ -121,7 +121,7 @@ int main(int argc,char**argv){
         if(state==TITLE){
             rect(0xFFEF82A5,0,0,SCR_W,SCR_H);draw_tex(&mainmenu,24,8,0.50f);draw_tex(&openbtn,275,184,0.75f);
         }else if(state==PLAY){
-            rect(0xFFFFA0C0,0,0,SCR_W,SCR_H);draw_tex(&bg,0,0,0.565f);
+            rect(0xFFFFA0C0,0,0,SCR_W,SCR_H);draw_tex(&bg,0,0,1.0f);
             float cx=side?260.0f:80.0f;draw_tex(&chars[character][animFrame],cx,45,1.05f);
             draw_tex(&closet,177,20,0.78f);draw_tex(&door,closetOpen?270.0f:177.0f,20,0.78f);
             draw_tex(&leftbtn,12,205,0.85f);draw_tex(&rightbtn,420,205,0.85f);draw_tex(&openbtn,190,224,0.62f);
