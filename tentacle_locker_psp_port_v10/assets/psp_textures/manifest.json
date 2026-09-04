@@ -1,0 +1,147 @@
+[
+  {
+    "name": "102_background",
+    "file": "102_background.rgba",
+    "width": 480,
+    "height": 272,
+    "tex_width": 512,
+    "tex_height": 512,
+    "bytes": 1048576,
+    "note": "screen-fitted crop from Texture2D background"
+  },
+  {
+    "name": "103_mainmenu",
+    "file": "103_mainmenu.rgba",
+    "width": 431,
+    "height": 514,
+    "tex_width": 512,
+    "tex_height": 1024,
+    "bytes": 2097152
+  },
+  {
+    "name": "16_closet_background",
+    "file": "16_closet_background.rgba",
+    "width": 126,
+    "height": 319,
+    "tex_width": 128,
+    "tex_height": 512,
+    "bytes": 262144
+  },
+  {
+    "name": "5_character_body_01",
+    "file": "5_character_body_01.rgba",
+    "width": 361,
+    "height": 319,
+    "tex_width": 512,
+    "tex_height": 512,
+    "bytes": 1048576
+  },
+  {
+    "name": "20_closet_Door",
+    "file": "20_closet_Door.rgba",
+    "width": 126,
+    "height": 319,
+    "tex_width": 128,
+    "tex_height": 512,
+    "bytes": 262144
+  },
+  {
+    "name": "28_OpenbtnUp",
+    "file": "28_OpenbtnUp.rgba",
+    "width": 163,
+    "height": 72,
+    "tex_width": 256,
+    "tex_height": 128,
+    "bytes": 131072
+  },
+  {
+    "name": "100_spacebtnUp",
+    "file": "100_spacebtnUp.rgba",
+    "width": 163,
+    "height": 72,
+    "tex_width": 256,
+    "tex_height": 128,
+    "bytes": 131072
+  },
+  {
+    "name": "38_leftbtn_Up",
+    "file": "38_leftbtn_Up.rgba",
+    "width": 61,
+    "height": 57,
+    "tex_width": 64,
+    "tex_height": 64,
+    "bytes": 16384
+  },
+  {
+    "name": "10_Rightclosetbtn",
+    "file": "10_Rightclosetbtn.rgba",
+    "width": 34,
+    "height": 26,
+    "tex_width": 64,
+    "tex_height": 32,
+    "bytes": 8192
+  },
+  {
+    "name": "109_fucking_window_front",
+    "file": "109_fucking_window_front.rgba",
+    "width": 430,
+    "height": 553,
+    "tex_width": 512,
+    "tex_height": 1024,
+    "bytes": 2097152
+  },
+  {
+    "name": "106_fucking_window_02",
+    "file": "106_fucking_window_02.rgba",
+    "width": 430,
+    "height": 553,
+    "tex_width": 512,
+    "tex_height": 1024,
+    "bytes": 2097152
+  },
+  {
+    "name": "45_fucking_window_anim02",
+    "file": "45_fucking_window_anim02.rgba",
+    "width": 430,
+    "height": 553,
+    "tex_width": 512,
+    "tex_height": 1024,
+    "bytes": 2097152
+  },
+  {
+    "name": "121_fucking_window_anim01",
+    "file": "121_fucking_window_anim01.rgba",
+    "width": 430,
+    "height": 553,
+    "tex_width": 512,
+    "tex_height": 1024,
+    "bytes": 2097152
+  },
+  {
+    "name": "112_mainmenubook",
+    "file": "112_mainmenubook.rgba",
+    "width": 698,
+    "height": 460,
+    "tex_width": 1024,
+    "tex_height": 512,
+    "bytes": 2097152
+  },
+  {
+    "name": "116_character_body_02",
+    "file": "116_character_body_02.rgba",
+    "width": 361,
+    "height": 319,
+    "tex_width": 512,
+    "tex_height": 512,
+    "bytes": 1048576
+  },
+  {
+    "name": "51_character_body_03",
+    "file": "51_character_body_03.rgba",
+    "width": 361,
+    "height": 319,
+    "tex_width": 512,
+    "tex_height": 512,
+    "bytes": 1048576
+  }
+]
