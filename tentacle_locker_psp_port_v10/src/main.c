@@ -58,7 +58,7 @@ static void draw_tex(Texture*t,float x,float y,float scale){
     if(!t->pixels)return;
     sceGuTexMode(GU_PSM_8888,0,0,0);
     int lw=0,lh=0;while((1<<lw)<t->tw)lw++;while((1<<lh)<t->th)lh++;
-    sceGuTexImage(0,lw,lh,t->tw,t->pixels);
+    sceGuTexImage(0,t->tw,t->th,t->tw,t->pixels);
     Vertex*v=(Vertex*)sceGuGetMemory(2*sizeof(Vertex));
     v[0]=(Vertex){0,0,x,y,0}; v[1]=(Vertex){(float)t->w,(float)t->h,x+t->w*scale,y+t->h*scale,0};
     sceGuDrawArray(GU_SPRITES,GU_TEXTURE_32BITF|GU_VERTEX_32BITF|GU_TRANSFORM_2D,2,0,v);
