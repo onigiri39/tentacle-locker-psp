@@ -19,7 +19,7 @@ jobs:
           docker run --rm \
             -v "$GITHUB_WORKSPACE:/build" \
             -w /build/tentacle_locker_psp_port_v10 \
-            ghcr.io/pspdev/pspsdk:latest \
+            pspdev/pspdev:latest
             sh -lc 'make clean all dist'
 
       - name: Upload PSP build
