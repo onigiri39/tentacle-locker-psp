@@ -50,7 +50,7 @@ static void begin_frame(void){
     sceGuClearColor(0xFF202030); sceGuClear(GU_COLOR_BUFFER_BIT);
     sceGuDisable(GU_DEPTH_TEST); sceGuEnable(GU_TEXTURE_2D); sceGuEnable(GU_BLEND);
     sceGuBlendFunc(GU_ADD,GU_SRC_ALPHA,GU_ONE_MINUS_SRC_ALPHA,0,0);
-    sceGuTexFunc(GU_TFX_MODULATE,GU_TCC_RGBA); sceGuTexFilter(GU_LINEAR,GU_LINEAR);
+    sceGuTexFunc(GU_TFX_REPLACE,GU_TCC_RGBA); sceGuTexFilter(GU_NEAREST,GU_NEAREST);
 }
 static void end_frame(void){sceGuFinish();sceGuSync(0,0);sceDisplayWaitVblankStart();sceGuSwapBuffers();}
 
