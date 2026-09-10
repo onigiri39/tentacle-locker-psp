@@ -63,6 +63,35 @@ static void draw_tex(Texture*t,float x,float y,float scale){
     v[0]=(Vertex){0,0,x,y,0}; v[1]=(Vertex){(float)t->w,(float)t->h,x+t->w*scale,y+t->h*scale,0};
     sceGuDrawArray(GU_SPRITES,GU_TEXTURE_32BITF|GU_VERTEX_32BITF|GU_TRANSFORM_2D,2,0,v);
 }
+static void draw_char_frame(Texture*t,int frame,float x,float y,float scale){
+    if(!t->pixels)return;
+
+    sceGuTexMode(GU_PSM_8888,0,0,0);
+    sceGuTexImage(0,t->tw,t->th,t->tw,t->pixels);
+
+    /* 3列×2行のスプライトシートから1コマを選択 */
+    int col=frame%3;
+    int row=frame/3;
+
+    float cellW=(float)t->w/3.0f;
+    float cellH=(float)t->h/2.0f;
+
+    float u0=col*cellW;
+    float v0=row*cellH;
+    float u1=u0+cellW;
+    float v1=v0+cellH;
+
+    Vertex*v=(Vertex*)sceGuGetMemory(2*sizeof(Vertex));
+
+    v[0]=(Vertex){u0,v0,x,y,0};
+    v[1]=(Vertex){u1,v1,x+cellW*scale,y+cellH*scale,0};
+
+    sceGuDrawArray(
+        GU_SPRITES,
+        GU_TEXTURE_32BITF|GU_VERTEX_32BITF|GU_TRANSFORM_2D,
+        2,0,v
+    );
+}
 static void rect(unsigned int color,float x,float y,float w,float h){
     sceGuDisable(GU_TEXTURE_2D); sceGuColor(color);
     Vertex*v=(Vertex*)sceGuGetMemory(2*sizeof(Vertex));
@@ -122,7 +151,7 @@ int main(int argc,char**argv){
             rect(0xFFEF82A5,0,0,SCR_W,SCR_H);draw_tex(&mainmenu,24,8,0.50f);draw_tex(&openbtn,275,184,0.75f);
         }else if(state==PLAY){
             rect(0xFFFFA0C0,0,0,SCR_W,SCR_H);draw_tex(&bg,0,0,1.0f);
-            float cx=side?260.0f:80.0f;draw_tex(&chars[character][animFrame],cx,45,1.05f);
+            float cx=side?260.0f:80.0f;draw_char_frame(&chars[character][animFrame],animFrame,cx,45,1.05f);
             draw_tex(&closet,177,20,0.78f);draw_tex(&door,closetOpen?270.0f:177.0f,20,0.78f);
             draw_tex(&leftbtn,12,205,0.85f);draw_tex(&rightbtn,420,205,0.85f);draw_tex(&openbtn,190,224,0.62f);
             if(actionFrames>0){int wf=(actionFrames<20)?2:((actionFrames<40)?1:0);draw_tex(&windowFrames[wf],115,5,0.25f);}
